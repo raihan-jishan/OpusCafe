@@ -1,9 +1,9 @@
 // navLink data
 export const navLinks = [
-  { name: "Home" },
-  { name: "Categories" },
-  { name: "Reviews" },
-  { name: "Blog" },
+  { name: "Home", path: "/#home" },
+  { name: "Categories", path: "/#categories" },
+  { name: "Reviews", path: "/#reviews" },
+  { name: "Blog", path: "/#blog" },
 ];
 // footer detail-links
 export const footerDetailLinks = [

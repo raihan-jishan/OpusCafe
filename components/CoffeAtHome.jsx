@@ -1,3 +1,4 @@
+import { HeroAnimation } from "@/global/Animation";
 import Wrapper from "@/global/wrapper";
 import Image from "next/image";
 import { FaGooglePlay } from "react-icons/fa6";
@@ -7,7 +8,8 @@ import { Button, buttonVariants } from "./ui/button";
 const CofeAtHome = () => {
   return (
     <Wrapper className={"mt-5 p-5 bg-gray-200"}>
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 max-lg:flex max-lg:flex-col-reverse">
+   <HeroAnimation>
+   <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 max-lg:flex max-lg:flex-col-reverse">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
             Instant Coffee At Your Home
@@ -37,6 +39,7 @@ const CofeAtHome = () => {
           />
         </div>
       </div>
+   </HeroAnimation>
     </Wrapper>
   );
 };
