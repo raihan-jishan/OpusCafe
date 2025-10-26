@@ -1,17 +1,18 @@
-import Link from "next/link";
+"use client";
+import Link from "next/link"; 
 
-const NavLink = ({ label, bgColor, path , closeNav}) => {
+const NavLink = ({ path, label, closeNav }) => {
+  
+
   return (
-    <li>
-      <Link
-        href={path ? path : '/'}
-        className={`block py-2 px-3 text-black font-semibold rounded   md:p-0 hover:underline transition-all  bg-gray-500 text-center mt-6   `}
-        style={{ backgroundColor: `${bgColor} ` }}
-        onClick={closeNav}
-      >
-        {label}
-      </Link>
-    </li>
+    <Link
+      href={path ? path : "/"}
+      onClick={closeNav}
+      className={`block py-2 px-3 font-semibold md:p-0 transition-all duration-300 text-center mt-6 
+        text-black border-b-2 border-transparent hover:border-black`}
+    >
+      {label}
+    </Link>
   );
 };
 

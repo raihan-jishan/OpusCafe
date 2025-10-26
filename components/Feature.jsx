@@ -1,22 +1,28 @@
+'use client';
 import { HeroAnimation } from "@/global/Animation";
-import { BiDollar } from "react-icons/bi";
-import { LuCupSoda } from "react-icons/lu";
-import { FeatureCard } from "./ui/card";
+import { FeatureCard } from "@/components/ui/card";
+import { CircleDollarSign, Coffee, CupSoda, History } from "lucide-react";
+import useResponsiveSize from "@/hooks/useResponsiveSize";
+
 const Feature = () => {
-  return ( 
-  <HeroAnimation>
-      <div className="-mt-[18rem]  max-lg:mt-5 gap-1 w-[60%] grid grid-cols-1 lg:grid-cols-3        max-lg:grid-cols-1 max-lg:w-[100%] ">
-      <FeatureCard
-        icon={<LuCupSoda size={40} />}
-        label={"24/7 Free Delivery"}
-      />
-      <FeatureCard icon={<BiDollar size={40} />} label={"100% cheap  rate"} />
-      <FeatureCard
-        icon={<LuCupSoda size={40} />}
-        label={"customizable coffe"}
-      />
-    </div>
-  </HeroAnimation>
+  const size = useResponsiveSize(30, 25);
+  return (
+    <HeroAnimation>
+      <div className="grid grid-cols-3 gap-2 max-lg:grid-cols-2  ">
+        <FeatureCard
+          label={"24/7 Free Delivery"}
+          icon={<History size={size} />}
+        />
+        <FeatureCard
+          label={"100% cheap rate"}
+          icon={<CircleDollarSign size={size} />}
+        />
+        <FeatureCard
+          label={"customizable coffe"}
+          icon={<CupSoda size={size} />}
+        />
+      </div>
+    </HeroAnimation>
   );
 };
 

@@ -8,7 +8,7 @@ const ExploreItem = () => {
   return (
     <main className="bg-gray-50 text-black mt-20 p-10 ">
       <HeroAnimation>
-        <Heading label={"Explore   Food category"} />
+        <Heading label={" Food category"} />
 
         <div className="flex items-center justify-center gap-5 mt-10 max-lg:flex-col">
           <FoodCard
@@ -19,7 +19,7 @@ const ExploreItem = () => {
             imageUrl={
               "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRyaW5rJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D"
             }
-            customBg={"bg-orange-200/80  "}
+            customBg={"bg-gray-400/90 text-gray-950  "}
             bgWidth={"w-[50%] max-lg:w-[70%]"}
             icon={<IoFastFoodOutline size={30} />}
           />
@@ -31,8 +31,8 @@ const ExploreItem = () => {
             imageUrl={
               "https://plus.unsplash.com/premium_photo-1669905375164-388815c9dcf6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGNvZmZlJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D"
             }
-            customBg={"bg-yellow-500/20 text-gray-950"}
-            bgWidth={"w-[40%] max-lg:w-[50%]"}
+            customBg={"bg-amber-500/80 text-slate-900"}
+            bgWidth={"w-[35%] max-lg:w-[50%]"}
             icon={<RiDrinks2Line size={30} />}
           />
           <FoodCard
@@ -43,8 +43,8 @@ const ExploreItem = () => {
             imageUrl={
               "https://images.unsplash.com/photo-1617108126666-3b4f0251913a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRyaW5rJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D"
             }
-            customBg={"bg-yellow-400/50 text-gray-950"}
-            bgWidth={"w-[60%] max-lg:w-[80%]"}
+            customBg={" bg-amber-400/70 text-gray-950"}
+            bgWidth={"w-[52%] max-lg:w-[80%]"}
             icon={<BiSolidDrink size={30} />}
           />
         </div>

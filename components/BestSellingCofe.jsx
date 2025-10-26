@@ -24,14 +24,14 @@ const BestSellingCofe = () => {
             star={"4.8"}
             image={"/assets/coffe-2.png"}
             price={"$59"}
-            sellingPoint={"1"}
+            sellingPoint={"2"}
           />
           <ProductCard
             label={"Midnight Mocha"}
             star={"4.5"}
             image={"/assets/coffe-3.webp"}
             price={"$65"}
-            sellingPoint={"1"}
+            sellingPoint={"3"}
           />
         </div>
         <div className="flex items-center justify-center">

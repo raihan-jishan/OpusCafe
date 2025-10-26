@@ -2,13 +2,14 @@ import Image from "next/image";
 import { CiTwitter } from "react-icons/ci";
 import { FaRegHeart, FaStar } from "react-icons/fa6";
 import { FiCoffee } from "react-icons/fi";
-import { MdOutlineWorkspacePremium } from 'react-icons/md';
+import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { Button, buttonVariants } from "./button";
 export const FeatureCard = ({ icon, label }) => {
   return (
-    <div className="p-5 flex gap-0 items-center justify-center   rounded-full  bg-gray-500/10 max-lg:bg-transparent max-lg:shadow-none max-lg:border-2 shadow-md">
-      <span>{icon}</span>
-      <h1 className="text-xl font-semibold mt-1 max-lg:text-lg">{label} </h1>
+    <div className=" gap-1 text-lg font-medium text-gray-900 bg-slate-100 p-4  rounded-2xl max-lg:p-3">
+      <div className="flex gap-1 items-center max-lg:flex-col">
+        {icon} {label}
+      </div>
     </div>
   );
 };
@@ -22,13 +23,13 @@ export const FoodCard = ({
   icon,
 }) => {
   return (
-    <article className="max-w-xl relative overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:scale-105 mt-10  cursor-pointer ">
+    <article className="max-w-2xl relative overflow-hidden rounded-[10%] shadow transition  mt-10  cursor-pointer ">
       <Image
         src={imageUrl}
         alt=""
         width={500}
-        height={200}
-        className=" absolute inset-0 h-full w-full object-cover"
+        height={500}
+        className=" absolute inset-0 h-full w-full object-fill "
       />
 
       <div className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64">
@@ -36,13 +37,13 @@ export const FoodCard = ({
           <a href="#">
             <h3
               className={`mt-0.5 text-2xl  font-semibold capitalize       ${bgWidth} 
-              ${customBg} flex gap-1  p-2  rounded-full
+              ${customBg} flex gap-1  p-2  rounded-lg
               `}
             >
               {title} {icon}
             </h3>
             <h2
-              className={`${customBg} p-1 rounded-md font-semibold mt-1 text-md  `}
+              className={`bg-gray-200/10  p-1 rounded-md font-semibold mt-1 text-md  `}
             >
               {description}
             </h2>
@@ -95,11 +96,10 @@ export const ProductCard = ({ image, star, sellingPoint, label, price }) => {
 
         <Button
           className={buttonVariants({
-            className: "p-6 px-24   rounded-xl font-semibold",
+            className: "p-6 px-28   rounded-xl font-semibold",
           })}
         >
           Order Now
-          <FaRegHeart size={50} />{" "}
         </Button>
       </div>
     </div>
@@ -108,32 +108,36 @@ export const ProductCard = ({ image, star, sellingPoint, label, price }) => {
 // review card
 export const ReviewCard = ({ name, handle, review, Avatar }) => {
   return (
-    <div className="flex flex-col justify-between rounded-3xl      text-black p-5 shadow-sm max-w-sm mx-auto mt-24 bg-orange-200">
-      <div className="mt-6 flex items-center gap-6 bg-gray-800/10 p-2">
-        <div className="h-10 w-10 overflow-hidden rounded-full shadow-sm outline-neutral-800">
+    <div className="flex flex-col justify-between rounded-3xl text-black p-6 shadow-sm max-w-sm mx-auto mt-12 bg-gray-100">
+      <div className="mt-2 flex items-center gap-6 p-2">
+        <div className="h-20  w-20 overflow-hidden rounded-full shadow-sm outline-neutral-800">
+          {" "}
           <div className="relative inline-block overflow-hidden rounded-lg border-neutral-800">
+            {" "}
             <Image
               alt=""
               src={Avatar}
-              width="50"
-              height="50"
+              width="100"
+              height="100"
               decoding="async"
               data-nimg="1"
               className="inline-block "
               loading="lazy"
-            />
-          </div>
+            />{" "}
+          </div>{" "}
         </div>
+
         <div>
           <h2 className="leading-relaxed tracking-wide text-xl text-black font-semibold">
             {name}
           </h2>
-          <p className="text-[1rem] leading-relaxed tracking-wide text-black flex gap-3  ">
-            <CiTwitter size={25} className="text-primary " /> @{handle}
+          <p className="text-sm leading-relaxed tracking-wide text-black flex items-center gap-2">
+            <CiTwitter size={22} className="text-primary" /> @{handle}
           </p>
         </div>
       </div>
-      <p className="my-4 mb-0 text-base font-normal leading-relaxed tracking-wide text-black">
+
+      <p className="my-4 mb-0  text-base font-normal leading-relaxed tracking-wide text-black">
         {review}
       </p>
     </div>

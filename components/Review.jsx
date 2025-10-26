@@ -5,11 +5,11 @@ import { ReviewCard } from "./ui/card";
 import Heading from "./ui/heading";
 const Review = () => {
   return (
-    <Wrapper className={"mt-5 p-5"}>
+    <Wrapper className={" p-5"}>
       <HeroAnimation>
         <Heading label={"Client Review's"} />
         <div
-          className=" m-2 p-6  grid grid-cols-1 lg:grid-cols-3   w-full     flex-wrap max-lg:p-0 max-lg:m-0 "
+          className=" m-2  grid grid-cols-1 lg:grid-cols-3   w-full     flex-wrap max-lg:p-0 max-lg:m-0 "
           id="reviews"
         >
           {clientReviewsData.map((item, index) => {

@@ -7,7 +7,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import Brand from "../ui/brand";
 import CartBtn from "../ui/cartBtn";
 import NavBtn from "../ui/navBtn";
-import NavLink from "../ui/navLink";
+import NavLink from "../ui/navLink"; 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
@@ -31,11 +31,12 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", changeColor);
   }, []);
+ 
   return (
     <NavbarAnimation>
       <nav
         style={{ backgroundColor: `${color}` }}
-        className="bg-white p-3 fixed w-full z-20 top-0 start-0   max-lg:p-0  "
+        className=" p-3 fixed w-full z-20 top-0 start-0   max-lg:p-0  "
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 ">
           <Brand />
@@ -72,13 +73,8 @@ const Navbar = () => {
                   <NavLink
                     key={index}
                     closeNav={closeNav}
-                    path={
-                      item.name.toLowerCase() === "blog"
-                        ? "/blog"
-                        : `/#${item.name.toLowerCase()}`
-                    }
+                    path={item.path}
                     label={item.name}
-                    bgColor={color}
                   />
                 );
               })}
